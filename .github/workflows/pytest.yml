@@ -5,9 +5,13 @@ name: 'Test Package'
 
 on:
   push:
+    paths:
+      - '**/*.py'
     branches: [ '*' ]
   pull_request:
-    branches: [ "main", "dev" ]
+    paths:
+      - '**/*.py'
+    branches: [ "trunk", "development" ]
 
 jobs:
   build:
